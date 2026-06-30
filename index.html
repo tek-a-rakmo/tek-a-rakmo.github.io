@@ -50,6 +50,7 @@
                 <li><a href="#stack" class="nav__link" data-hover>Stack</a></li>
                 <li><a href="#field-notes" class="nav__link" data-hover>Field Notes</a></li>
                 <li><a href="#lab" class="nav__link" data-hover>The Lab</a></li>
+                <li><a href="#ground-truth" class="nav__link" data-hover>Ground Truth</a></li>
             </ul>
             <a href="#transmission" class="nav__cta" data-hover>Transmit</a>
             <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -66,6 +67,7 @@
             <li><a href="#stack" data-hover>Stack</a></li>
             <li><a href="#field-notes" data-hover>Field Notes</a></li>
             <li><a href="#lab" data-hover>The Lab</a></li>
+            <li><a href="#ground-truth" data-hover>Ground Truth</a></li>
             <li><a href="#transmission" data-hover>Transmit</a></li>
         </ul>
     </div>
@@ -281,9 +283,9 @@
                         </div>
                         <div class="field-note__page">
                             <ul>
-                                <li>Contributing to an open-source time-series forecasting library in JAX, optimizing training speed via hardware-accelerated numerical computing.</li>
+                                <li>Contributing to <strong>Chronax</strong>, an open-source JAX time-series forecasting library, optimizing training speed via hardware-accelerated numerical computing.</li>
                                 <li>Performed end-to-end data collection, transformation, and annotation for production-grade training of a time-series foundation model.</li>
-                                <li>Built a benchmarking framework evaluating the JAX library against StatsForecast models.</li>
+                                <li>Built a benchmarking framework evaluating Chronax against StatsForecast models, and supported the release process (TestPyPI) plus a paper on Chronax.</li>
                             </ul>
                         </div>
                     </article>
@@ -353,11 +355,81 @@
             </div>
         </section>
 
-        <!-- ============ 7. TRANSMISSION -- Contact ============ -->
+        <!-- ============ 7. GROUND TRUTH -- Endorsements & Credentials ============ -->
+        <section class="section ground-truth" id="ground-truth">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <span class="section__index">06</span>
+                    <h2 class="section__title">Ground Truth</h2>
+                    <p class="section__tag">External validation &mdash; what colleagues say, and what I've earned</p>
+                </header>
+
+                <figure class="endorsement glass" data-reveal>
+                    <blockquote>
+                        Omkar is a highly versatile engineer who bridges rigorous data analysis and
+                        high-performance numerical computing. He started as a Data Analyst and over time
+                        took on additional responsibilities supporting our machine learning efforts. This
+                        versatility proved valuable during his contributions to <strong>Chronax</strong>,
+                        our open-source time-series forecasting library &mdash; he helped optimize model
+                        training performance using JAX, built a benchmarking framework for evaluating
+                        forecasting models, and supported the library's release, including TestPyPI testing
+                        ahead of launch. He also contributed to a paper on Chronax. I would recommend him to
+                        any team looking for someone who can tackle complex problems with minimal supervision.
+                    </blockquote>
+                    <figcaption>
+                        <span class="endorsement__name">Denizalp Goktas</span>
+                        <span class="endorsement__role">Simulacrum &middot; LinkedIn recommendation</span>
+                    </figcaption>
+                </figure>
+
+                <div class="certs">
+                    <h3 class="certs__title" data-reveal>Certifications</h3>
+                    <div class="certs__grid">
+                        <article class="cert" data-reveal>
+                            <span class="cert__date">Dec 2025</span>
+                            <h4 class="cert__name">Develop Serverless Applications on Cloud Run</h4>
+                            <span class="cert__issuer">Google</span>
+                        </article>
+                        <article class="cert" data-reveal>
+                            <span class="cert__date">Jun 2025</span>
+                            <h4 class="cert__name">Hands-On Analytics Engineering Project</h4>
+                            <span class="cert__issuer">LinkedIn</span>
+                        </article>
+                        <article class="cert" data-reveal>
+                            <span class="cert__date">May 2023</span>
+                            <h4 class="cert__name">Programming for Everybody (Python)</h4>
+                            <span class="cert__issuer">Coursera &middot; University of Michigan</span>
+                        </article>
+                        <article class="cert" data-reveal>
+                            <span class="cert__date">Mar 2023</span>
+                            <h4 class="cert__name">Going Places with Spatial Analysis</h4>
+                            <span class="cert__issuer">Esri</span>
+                        </article>
+                        <article class="cert" data-reveal>
+                            <span class="cert__date">Jul 2022</span>
+                            <h4 class="cert__name">Fundamentals of Remote Sensing</h4>
+                            <span class="cert__issuer">GEO University</span>
+                        </article>
+                        <article class="cert" data-reveal>
+                            <span class="cert__date">Jul 2022</span>
+                            <h4 class="cert__name">GIS Data Formats, Design &amp; Quality</h4>
+                            <span class="cert__issuer">Coursera &middot; UC Davis</span>
+                        </article>
+                        <article class="cert" data-reveal>
+                            <span class="cert__date">Apr 2022</span>
+                            <h4 class="cert__name">Fundamentals of GIS</h4>
+                            <span class="cert__issuer">Coursera &middot; UC Davis</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 8. TRANSMISSION -- Contact ============ -->
         <section class="section transmission" id="transmission">
             <div class="container">
                 <header class="section__head section__head--center" data-reveal>
-                    <span class="section__index">06</span>
+                    <span class="section__index">07</span>
                     <h2 class="section__title">Transmission</h2>
                     <p class="section__tag">Open a channel</p>
                 </header>
@@ -398,9 +470,7 @@
             <span class="footer__name">Omkar Tekawade</span>
             <span class="footer__copy">&copy; 2026 &middot; From Orbit to Insight</span>
             <span class="footer__certs">
-                Certifications: Fundamentals of GIS (UC Davis) &middot; GIS Data Formats &amp; Quality (UC Davis)
-                &middot; Going Places with Spatial Analysis (Esri) &middot; Programming for Everybody &mdash; Python (U-M)
-                &middot; Develop Serverless Apps on Cloud Run (Google)
+                Built with vanilla JS, GSAP &amp; Chart.js &middot; Designed at the intersection of human, AI &amp; design.
             </span>
         </div>
     </footer>
