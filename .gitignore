@@ -1,0 +1,10 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp capture / screenshot artifacts
+_*.png
+
+# Logs
+*.log

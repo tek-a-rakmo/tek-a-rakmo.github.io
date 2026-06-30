@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar Tekawade | From Orbit to Insight</title>
+    <meta name="description" content="Omkar Tekawade -- Geospatial Data Analyst and Cornell MPS graduate turning satellite pixels into planetary insights through remote sensing, GIS, and machine learning.">
+    <meta name="author" content="Omkar Tekawade">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Omkar Tekawade | From Orbit to Insight">
+    <meta property="og:description" content="Geospatial Data Analyst. Cornell MPS. I turn satellite pixels into planetary insights.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ot73/portfolio_images/main/rooftop%20agriculture.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // Flip no-js to js as early as possible so CSS can branch on capability.
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+</head>
+<body>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+    <!-- Background particle canvas (fixed, behind everything) -->
+    <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#hero" class="nav__brand" data-hover>
+                <span class="nav__brand-mark">OT</span>
+                <span class="nav__brand-name">Omkar Tekawade</span>
+            </a>
+            <ul class="nav__links">
+                <li><a href="#signal" class="nav__link" data-hover>Signal</a></li>
+                <li><a href="#coordinates" class="nav__link" data-hover>Coordinates</a></li>
+                <li><a href="#stack" class="nav__link" data-hover>Stack</a></li>
+                <li><a href="#field-notes" class="nav__link" data-hover>Field Notes</a></li>
+                <li><a href="#lab" class="nav__link" data-hover>The Lab</a></li>
+            </ul>
+            <a href="#transmission" class="nav__cta" data-hover>Transmit</a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul>
+            <li><a href="#signal" data-hover>Signal</a></li>
+            <li><a href="#coordinates" data-hover>Coordinates</a></li>
+            <li><a href="#stack" data-hover>Stack</a></li>
+            <li><a href="#field-notes" data-hover>Field Notes</a></li>
+            <li><a href="#lab" data-hover>The Lab</a></li>
+            <li><a href="#transmission" data-hover>Transmit</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        <!-- ============ 1. HERO -- Acquiring Signal ============ -->
+        <section class="hero" id="hero">
+            <div class="hero__inner">
+                <p class="hero__eyebrow" data-fade>
+                    <span class="hero__status-dot"></span>
+                    Acquiring signal&hellip; 41.7&deg;N, 73.9&deg;W
+                </p>
+                <h1 class="hero__title" id="hero-title">
+                    I turn satellite pixels into planetary insights.
+                </h1>
+                <p class="hero__subtitle" data-fade>
+                    Geospatial Data Analyst &middot; Cornell MPS &middot; Problem Solver
+                </p>
+                <div class="hero__actions" data-fade>
+                    <a href="https://www.linkedin.com/in/omkartekawade" target="_blank" rel="noopener" class="coord-btn" data-hover data-magnetic>
+                        <span class="coord-btn__label">LinkedIn</span>
+                        <span class="coord-btn__coord">in/omkartekawade</span>
+                    </a>
+                    <a href="https://github.com/tek-a-rakmo/" target="_blank" rel="noopener" class="coord-btn" data-hover data-magnetic>
+                        <span class="coord-btn__label">GitHub</span>
+                        <span class="coord-btn__coord">tek-a-rakmo</span>
+                    </a>
+                    <a href="mailto:omkartekawade13061999@gmail.com" class="coord-btn" data-hover data-magnetic>
+                        <span class="coord-btn__label">Email</span>
+                        <span class="coord-btn__coord">say hello</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#signal" class="hero__scroll" aria-label="Scroll to content" data-hover>
+                <span class="hero__scroll-text">Descend</span>
+                <span class="hero__scroll-line"></span>
+            </a>
+        </section>
+
+        <!-- ============ 2. THE SIGNAL -- About ============ -->
+        <section class="section signal" id="signal">
+            <div class="signal__noise" id="signal-noise" aria-hidden="true"></div>
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <span class="section__index">01</span>
+                    <h2 class="section__title">The Signal</h2>
+                    <p class="section__tag">Extracting meaning from noise</p>
+                </header>
+
+                <div class="signal__body">
+                    <div class="signal__text">
+                        <p data-reveal>
+                            I am a Geospatial Data Analyst and a recent Master's graduate from
+                            <strong>Cornell University</strong>, specializing in Integrative Plant Science
+                            (Geospatial Applications). Building on a foundation in Agricultural Engineering
+                            from Mahatma Phule Krishi Vidyapeeth, I use geospatial technology to drive
+                            positive change in agriculture and beyond.
+                        </p>
+                        <p data-reveal>
+                            As a lifelong learner and problem solver, I thrive on deconstructing complex
+                            challenges &mdash; whether designing autonomous sensor systems for field research
+                            or optimizing machine learning pipelines for time-series forecasting.
+                        </p>
+                        <p data-reveal>
+                            Currently I am a Product Research Intern at <strong>Simulacrum</strong>, where I
+                            leverage JAX and Python to build open-source forecasting tools. Previously, as a
+                            Process Executive at Cognizant, I honed data analysis and digitization skills
+                            through large-scale mapping and attribute coding.
+                        </p>
+                    </div>
+
+                    <aside class="signal__competencies" data-reveal>
+                        <h3>Core Competencies</h3>
+                        <ul>
+                            <li>
+                                <span class="comp__key">Geospatial</span>
+                                <span class="comp__val">ArcGIS Pro, QGIS, Google Earth Engine, Satellite Imagery</span>
+                            </li>
+                            <li>
+                                <span class="comp__key">Data Science</span>
+                                <span class="comp__val">Python (JAX, Pandas), SQL, Time-Series Forecasting</span>
+                            </li>
+                            <li>
+                                <span class="comp__key">Problem Solving</span>
+                                <span class="comp__val">From digitizing road networks to engineering low-power sensors</span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. COORDINATES -- Education ============ -->
+        <section class="section coordinates" id="coordinates">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <span class="section__index">02</span>
+                    <h2 class="section__title">Coordinates</h2>
+                    <p class="section__tag">Waypoints along the journey</p>
+                </header>
+
+                <div class="coord-track">
+                    <article class="coord-node" data-reveal>
+                        <div class="coord-node__marker"></div>
+                        <p class="coord-node__geo" data-coord="42.4534&deg;N, 76.4735&deg;W">42.4534&deg;N, 76.4735&deg;W</p>
+                        <div class="coord-node__card glass">
+                            <span class="coord-node__date">Aug 2025</span>
+                            <h3>Cornell University</h3>
+                            <p class="coord-node__deg">Master of Professional Studies</p>
+                            <p class="coord-node__field">Integrative Plant Science (Geospatial Applications)</p>
+                            <p class="coord-node__gpa">GPA 4.075 / 4.3</p>
+                            <p class="coord-node__course">
+                                Remote Sensing &amp; Modeling &middot; GIS &middot; Urban Data Science &middot;
+                                Data-Model Fusion &middot; Crop Ecology &middot; Field Crop Systems
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="coord-node" data-reveal>
+                        <div class="coord-node__marker"></div>
+                        <p class="coord-node__geo" data-coord="19.3870&deg;N, 74.6513&deg;E">19.3870&deg;N, 74.6513&deg;E</p>
+                        <div class="coord-node__card glass">
+                            <span class="coord-node__date">May 2022</span>
+                            <h3>Mahatma Phule Agricultural University</h3>
+                            <p class="coord-node__deg">Bachelor of Technology</p>
+                            <p class="coord-node__field">Agricultural Engineering</p>
+                            <p class="coord-node__gpa">GPA 8.54 / 10</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 4. THE STACK -- Skills ============ -->
+        <section class="section stack" id="stack">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <span class="section__index">03</span>
+                    <h2 class="section__title">The Stack</h2>
+                    <p class="section__tag">Layers of capability</p>
+                </header>
+
+                <div class="stack__body">
+                    <div class="stack__radar" data-reveal>
+                        <canvas id="skills-radar"></canvas>
+                    </div>
+
+                    <div class="stack__grid">
+                        <div class="skill-card" data-reveal data-axis="0">
+                            <h3>Analysis &amp; Modelling</h3>
+                            <ul>
+                                <li>Satellite Imagery Analysis</li>
+                                <li>Spatial Analysis</li>
+                                <li>Suitability Modelling</li>
+                                <li>Geospatial ML</li>
+                                <li>Time Series Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="skill-card" data-reveal data-axis="1">
+                            <h3>Programming</h3>
+                            <ul>
+                                <li>Python &amp; JAX</li>
+                                <li>R</li>
+                                <li>JavaScript</li>
+                                <li>SQL &amp; C++</li>
+                                <li>ETL Pipelines</li>
+                            </ul>
+                        </div>
+                        <div class="skill-card" data-reveal data-axis="2">
+                            <h3>Software</h3>
+                            <ul>
+                                <li>ArcGIS Pro &amp; QGIS</li>
+                                <li>Google Earth Engine</li>
+                                <li>AWS &amp; GCS</li>
+                                <li>Tableau</li>
+                                <li>Arduino IDE</li>
+                            </ul>
+                        </div>
+                        <div class="skill-card" data-reveal data-axis="3">
+                            <h3>Digital Agronomy</h3>
+                            <ul>
+                                <li>Experimental Field Design</li>
+                                <li>Sensor Platform Dev</li>
+                                <li>Field Data Acquisition</li>
+                                <li>Precision Ag Systems</li>
+                                <li>Yield Mapping</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5. FIELD NOTES -- Experience ============ -->
+        <section class="section field-notes" id="field-notes">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <span class="section__index">04</span>
+                    <h2 class="section__title">Field Notes</h2>
+                    <p class="section__tag">Records from the work</p>
+                </header>
+
+                <div class="field-track">
+                    <article class="field-note field-note--left" data-reveal>
+                        <div class="field-note__meta">
+                            <h3>Simulacrum Inc.</h3>
+                            <p class="field-note__role">
+                                <span class="live-dot"></span>
+                                Product Research Intern (Data Analyst &amp; ML Engineer)
+                            </p>
+                            <p class="field-note__when">Oct 2025 &ndash; Present &middot; Remote</p>
+                        </div>
+                        <div class="field-note__page">
+                            <ul>
+                                <li>Contributing to an open-source time-series forecasting library in JAX, optimizing training speed via hardware-accelerated numerical computing.</li>
+                                <li>Performed end-to-end data collection, transformation, and annotation for production-grade training of a time-series foundation model.</li>
+                                <li>Built a benchmarking framework evaluating the JAX library against StatsForecast models.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="field-note field-note--right" data-reveal>
+                        <div class="field-note__meta">
+                            <h3>Farmers Data Lab, Cornell</h3>
+                            <p class="field-note__role">Student Digital Agronomy Assistant</p>
+                            <p class="field-note__when">May 2025 &ndash; Aug 2025 &middot; Ithaca, NY</p>
+                        </div>
+                        <div class="field-note__page">
+                            <ul>
+                                <li>Led the RISC (Rowbot Interseeding Cover Crop) study, overseeing all phases from field design to implementation at the Cornell Ruminant Center.</li>
+                                <li>Engineered autonomous sensor systems, including a novel starved-power moisture sensor and a GPS-enabled CHIMES sensor bar.</li>
+                                <li>Created experimental plot maps in ArcGIS Pro to support downstream research.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="field-note field-note--left" data-reveal>
+                        <div class="field-note__meta">
+                            <h3>Cognizant Pvt Ltd</h3>
+                            <p class="field-note__role">Process Executive &mdash; Data</p>
+                            <p class="field-note__when">Jul 2023 &ndash; Jul 2024 &middot; Pune, India</p>
+                        </div>
+                        <div class="field-note__page">
+                            <ul>
+                                <li>Digitized 5,000+ road features and traffic signs for the HERE WeGo Maps database via the ATLAS platform, at 98% accuracy.</li>
+                                <li>Performed detailed attribute coding for complex geometries &mdash; roundabouts, bridges, tunnels, and speed limits.</li>
+                                <li>Conducted QA on 3,000+ mapping tasks, validating data against client databases.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6. THE LAB -- Projects ============ -->
+        <section class="section lab" id="lab">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <span class="section__index">05</span>
+                    <h2 class="section__title">The Lab</h2>
+                    <p class="section__tag">Where data becomes discovery &mdash; tap any project to go deeper</p>
+                </header>
+
+                <div class="lab__stats">
+                    <div class="stat" data-reveal>
+                        <span class="stat__num" data-count="36345">0</span>
+                        <span class="stat__label">suitable rooftops mapped</span>
+                    </div>
+                    <div class="stat" data-reveal>
+                        <span class="stat__num" data-count="2000" data-suffix="+">0</span>
+                        <span class="stat__label">urban agriculture sites</span>
+                    </div>
+                    <div class="stat" data-reveal>
+                        <span class="stat__num" data-count="3000" data-suffix=" km&sup2;">0</span>
+                        <span class="stat__label">peak SAV coverage</span>
+                    </div>
+                    <div class="stat" data-reveal>
+                        <span class="stat__num" data-count="1" data-suffix="M+">0</span>
+                        <span class="stat__label">buildings processed</span>
+                    </div>
+                </div>
+
+                <div class="lab__grid" id="project-cards"></div>
+            </div>
+        </section>
+
+        <!-- ============ 7. TRANSMISSION -- Contact ============ -->
+        <section class="section transmission" id="transmission">
+            <div class="container">
+                <header class="section__head section__head--center" data-reveal>
+                    <span class="section__index">06</span>
+                    <h2 class="section__title">Transmission</h2>
+                    <p class="section__tag">Open a channel</p>
+                </header>
+
+                <div class="transmission__body" data-reveal>
+                    <p class="transmission__lead">
+                        Always eager to learn new technologies and tackle impactful problems. Let's connect.
+                    </p>
+                    <div class="transmission__links">
+                        <a href="mailto:omkartekawade13061999@gmail.com" class="freq" data-hover data-magnetic>
+                            <span class="freq__wave"></span>
+                            <span class="freq__band">EMAIL</span>
+                            <span class="freq__val">omkartekawade13061999@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/omkartekawade" target="_blank" rel="noopener" class="freq" data-hover data-magnetic>
+                            <span class="freq__wave"></span>
+                            <span class="freq__band">LINKEDIN</span>
+                            <span class="freq__val">in/omkartekawade</span>
+                        </a>
+                        <a href="https://github.com/tek-a-rakmo/" target="_blank" rel="noopener" class="freq" data-hover data-magnetic>
+                            <span class="freq__wave"></span>
+                            <span class="freq__band">GITHUB</span>
+                            <span class="freq__val">tek-a-rakmo</span>
+                        </a>
+                        <a href="tel:+16172384574" class="freq" data-hover data-magnetic>
+                            <span class="freq__wave"></span>
+                            <span class="freq__band">PHONE</span>
+                            <span class="freq__val">+1 (617) 238-4574</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span class="footer__name">Omkar Tekawade</span>
+            <span class="footer__copy">&copy; 2026 &middot; From Orbit to Insight</span>
+            <span class="footer__certs">
+                Certifications: Fundamentals of GIS (UC Davis) &middot; GIS Data Formats &amp; Quality (UC Davis)
+                &middot; Going Places with Spatial Analysis (Esri) &middot; Programming for Everybody &mdash; Python (U-M)
+                &middot; Develop Serverless Apps on Cloud Run (Google)
+            </span>
+        </div>
+    </footer>
+
+    <!-- Project modal -->
+    <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal__panel glass" id="modal-panel" role="dialog" aria-modal="true"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <img id="lightbox-img" src="" alt="Enlarged project visual">
+        <button class="lightbox__close" id="lightbox-close" aria-label="Close image">&times;</button>
+    </div>
+
+    <!-- Libraries via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+    <!-- App scripts -->
+    <script src="js/particles.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
